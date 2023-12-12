@@ -10,7 +10,6 @@ document.addEventListener("DOMContentLoaded", function () {
         alert("Por favor, insira uma tarefa válida.");
         return;
       }
-  
       // Cria um novo item da lista
       const listItem = document.createElement("li");
       listItem.innerHTML = `
@@ -20,9 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
           <button class="delete">Remover</button>
         </div>
       `;
-  
       list.appendChild(listItem);
-  
       // Limpa o campo de entrada
       inputText.value = "";
   
@@ -31,7 +28,6 @@ document.addEventListener("DOMContentLoaded", function () {
       deleteButton.addEventListener("click", function () {
         list.removeChild(listItem);
       });
-  
       // Adiciona um evento de clique à caixa de seleção
       const checkbox = listItem.querySelector(".task-checkbox");
       checkbox.addEventListener("change", function () {
@@ -42,7 +38,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
     });
-
     // Adiciona um event listener para a tecla Enter
     inputText.addEventListener("keyup", function (event) {
       if (event.key === "Enter") {
